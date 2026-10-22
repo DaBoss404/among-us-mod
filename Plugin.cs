@@ -2,16 +2,19 @@ using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
+using MiraAPI;
 using MiraAPI.PluginLoading;
 using Reactor;
+using Reactor.Networking;
+using Reactor.Networking.Attributes;
 
 namespace NightwebRoles;
 
-// VERIFY against the MiraAPI example mod: attribute and interface names shift between releases.
 [BepInAutoPlugin("com.nightweb.roles", "Nightweb Roles")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 [BepInDependency(MiraApiPlugin.Id)]
+[ReactorModFlags(ModFlags.RequireOnAllClients)]
 public partial class NightwebPlugin : BasePlugin, IMiraPlugin
 {
     public string OptionsTitleText => "Nightweb";
