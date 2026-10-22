@@ -5,6 +5,7 @@ using HarmonyLib;
 using MiraAPI.GameOptions;
 using MiraAPI.Networking;
 using MiraAPI.Roles;
+using Reactor.Networking.Attributes;
 using NightwebRoles.Options;
 using UnityEngine;
 
@@ -17,7 +18,6 @@ public enum NightwebRpc : uint { Mutate = 0xB101, Shade = 0xB102 }
 /// including the vanilla Shapeshifter, Phantom and Viper (but not itself or plain Impostor). The swap replaces the current kit, never stacks, and
 /// reverts to Mutator after the next meeting. No visual tell: it is just a role change.
 /// </summary>
-[RegisterCustomRole]
 public class MutatorRole(IntPtr cppPtr) : ImpostorRole(cppPtr), ICustomRole
 {
     public string RoleName => "Mutator";
