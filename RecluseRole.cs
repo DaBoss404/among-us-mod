@@ -1,6 +1,7 @@
 using System;
 using MiraAPI.Roles;
 using UnityEngine;
+using Reactor.Networking.Attributes;
 
 namespace NightwebRoles.Roles;
 
@@ -8,7 +9,6 @@ namespace NightwebRoles.Roles;
 /// Recluse: Impostor whose kill is a Bite. Bite itself is the vanilla kill button
 /// (normal kill cooldown); the web/fade effect is added by RecluseMurderPatch.
 /// </summary>
-[RegisterCustomRole]
 public class RecluseRole(IntPtr cppPtr) : ImpostorRole(cppPtr), ICustomRole
 {
     public string RoleName => "Recluse";
