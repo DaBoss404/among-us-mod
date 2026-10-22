@@ -5,6 +5,7 @@ using MiraAPI.Networking;
 using MiraAPI.Roles;
 using NightwebRoles.Options;
 using UnityEngine;
+using Reactor.Networking.Attributes;
 
 namespace NightwebRoles.Roles;
 
@@ -13,7 +14,6 @@ namespace NightwebRoles.Roles;
 /// black default silhouette with no name, color, cosmetics or pet. The Shadow can still move, kill,
 /// vent and sabotage. Impostors and ghosts see it normally, only slightly darker.
 /// </summary>
-[RegisterCustomRole]
 public class ShadowRole(IntPtr cppPtr) : ImpostorRole(cppPtr), ICustomRole
 {
     public string RoleName => "Shadow";
