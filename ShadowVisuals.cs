@@ -12,7 +12,7 @@ namespace NightwebRoles.Patches;
 ///  - Impostors and ghosts: the same animation, but only ever to a slightly darker normal look.
 /// Nothing but the shaded flag crosses the network.
 /// </summary>
-[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.LateUpdate))]
+[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.FixedUpdate))]
 public static class ShadowVisualPatch
 {
     static readonly HashSet<byte> Active = new();
