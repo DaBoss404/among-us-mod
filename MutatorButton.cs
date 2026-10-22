@@ -6,7 +6,7 @@ using UnityEngine;
 namespace NightwebRoles.Buttons;
 
 /// <summary>HUD button that opens the role menu. Shown while the player is (or was this round) a Mutator.</summary>
-[RegisterButton]   // VERIFY: attribute name / auto-registration in your MiraAPI version
+   // VERIFY: attribute name / auto-registration in your MiraAPI version
 public class MutateButton : CustomActionButton
 {
     public override string Name => "Mutate";
