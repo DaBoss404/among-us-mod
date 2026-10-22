@@ -8,7 +8,7 @@ namespace NightwebRoles.Buttons;
 // Two separate buttons so each can get its own icon later. Only one is visible at a time:
 // Shade while you are unshaded, Unshade while you are shaded.
 
-[RegisterButton]   // VERIFY: attribute name / auto-registration in your MiraAPI version
+   // VERIFY: attribute name / auto-registration in your MiraAPI version
 public class ShadeButton : CustomActionButton
 {
     public override string Name => "Shade";
@@ -24,8 +24,6 @@ public class ShadeButton : CustomActionButton
 
     protected override void OnClick() => ShadowRpc.RpcSetShaded(PlayerControl.LocalPlayer, true);
 }
-
-[RegisterButton]
 public class UnshadeButton : CustomActionButton
 {
     public override string Name => "Unshade";
